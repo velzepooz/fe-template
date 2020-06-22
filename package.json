@@ -12,7 +12,7 @@
     "lint": "concurrently \"npm run lint:js\" \"npm run lint:css\" \"npm run lint:html\"",
     "predeploy": "npm run build",
     "deploy": "./deploy.sh",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest ./src"
   },
   "keywords": [
     "boilerplate",
@@ -28,8 +28,10 @@
     "@mate-academy/stylelint-config": "0.0.9",
     "concurrently": "^5.2.0",
     "eslint": "^7.3.0",
+    "eslint-plugin-jest": "^23.16.0",
     "eslint-plugin-node": "^11.1.0",
     "husky": "^4.2.5",
+    "jest": "^26.0.1",
     "node-sass": "^4.14.1",
     "parcel": "^1.12.4",
     "stylelint": "^13.6.1"
@@ -37,7 +39,7 @@
   "husky": {
     "hooks": {
       "pre-commit": "npm run lint",
-      "pre-push": "npm run lint"
+      "pre-push": "npm test"
     }
   }
 }
