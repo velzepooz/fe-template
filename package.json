@@ -5,7 +5,7 @@
   "main": "./src/index.html",
   "scripts": {
     "start": "parcel ./src/index.html --open",
-    "build": "rm -rf ./dist && parcel build ./src/index.html",
+    "build": "rm -rf ./dist && parcel build ./src/index.html --public-url ./",
     "lint:js": "eslint ./src",
     "lint:css": "stylelint ./src",
     "lint:html": "linthtml ./src",
