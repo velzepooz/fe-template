@@ -9,7 +9,7 @@
     "lint:js": "eslint ./src",
     "lint:css": "stylelint ./src",
     "lint:html": "linthtml ./src",
-    "lint": "npm run lint:js && npm run lint:css && npm run lint:html",
+    "lint": "concurrently \"npm run lint:js\" \"npm run lint:css\" \"npm run lint:html\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -27,6 +27,7 @@
     "concurrently": "^5.2.0",
     "eslint": "^7.3.0",
     "eslint-plugin-node": "^11.1.0",
+    "husky": "^4.2.5",
     "node-sass": "^4.14.1",
     "parcel": "^1.12.4",
     "stylelint": "^13.6.1"
